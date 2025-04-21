@@ -1,0 +1,17 @@
+.hero{
+    background-image: url(https://image.tmdb.org/t/p/original/nqUThBjou0TAWXu93Q4SNFpgqai.jpg);
+    background-size: cover;
+    padding: 10.6vw;
+   
+
+        &__container{
+            max-width: 540px;
+            
+        }
+
+        p{
+            margin-bottom: 20px;
+        }
+
+
+}

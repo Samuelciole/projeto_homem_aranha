@@ -1,0 +1,66 @@
+@use 'header';
+@use 'variaveis';
+@use 'hero';
+@use 'filmes';
+@use 'personagens';
+@use 'faq';
+@use 'footer';
+@use 'trailer';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: variaveis.$fonte-principal;
+}
+
+
+
+@mixin title ($fontSize: 40px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$CorTextoPrincipal;
+    text-transform: uppercase
+    
+}
+
+.title{
+    @include title(24px);
+
+    @media (max-width: 768px) {
+        @include title(16px);
+    }
+}
+.title--big{
+    @include title;
+
+    @media (max-width: 768px) {
+        @include title(22px);
+    }
+}
+
+.title--small{
+    @include title(15px);
+
+    @media (max-width: 768px) {
+        @include title(15px);
+    }
+}
+
+button{
+    padding: 10px;
+    color: variaveis.$CorTextBotao;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: 1px solid red;
+    cursor: pointer;
+    
+}
+
+.title_block{
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

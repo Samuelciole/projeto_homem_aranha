@@ -1,0 +1,18 @@
+@use 'variaveis';
+
+.trailer {
+    padding: 2rem;
+    background-color: variaveis.$CorDeFundo;
+    background-size: cover;
+    padding: 10.6vw;
+    text-align: center;
+  
+    &__video {
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    }
+  }
+  

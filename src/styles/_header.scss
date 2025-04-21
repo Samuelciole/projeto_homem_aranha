@@ -1,0 +1,48 @@
+@use 'variaveis';
+
+.header{
+    background-color: variaveis.$CorDeFundo;
+    color: variaveis.$CorTextoPrincipal;
+
+  
+
+        &__container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1240px;
+            width: 100%;
+            padding: 24px 0 24px 60px;
+
+            @media (max-width:768px){
+                display: contents;
+                text-align: center;
+            }
+        }
+
+      
+
+        &__nav{
+            @media (max-width:768px){
+                margin-left: 40px;
+            }
+
+
+            &__list{
+                display: flex;
+
+                &__item{
+                    list-style: none;
+                    margin: 0px 0 0 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        span{
+            display: flex;
+            margin-right: 50px;
+            justify-content: center;
+        }
+}
+

@@ -1,0 +1,78 @@
+@use 'variaveis';
+
+.filmes{
+    background-color: variaveis.$CorDeFundo;
+
+    display: flex;
+    justify-content: center;
+
+    .title--big{
+        margin-left: 20px;
+    }
+
+
+
+
+    
+   
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        margin-top: 100px;
+        display: none;
+        max-width: 540px;
+        width: 100%;
+        list-style: none;
+        padding-bottom: 100px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr ;
+            max-width: 200px;
+            width: 100%;
+        }   
+
+       
+        
+
+        &--is-active{
+            display: grid;
+        }
+
+        &__tabs__button{
+            color: variaveis.$CorTextoPrincipal;
+            background-color: variaveis.$preto-transparente;
+            font-size: 18px;
+            border: none;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            margin: 0 1vw;
+            margin-top: 15px;
+            border-bottom: 5px solid transparent;
+
+          
+
+            &--is-active {
+                border-color: variaveis.$CorTextBotao;
+            }
+        }
+
+        &__item{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img{
+            max-width: 1200px;
+            width: 100%;
+            border-radius: 5px;
+            margin-right: 150px;
+            cursor: pointer;
+            }
+        
+    }
+}
+

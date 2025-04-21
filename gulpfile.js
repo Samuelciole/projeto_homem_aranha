@@ -2,14 +2,14 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 function styles (){
-    return gulp.src('./src/styles/*.scss')
+    return gulp.src('./src/styles/main.scss')
         .pipe(sass({outputStyle: 'compressed' }))
         .pipe(gulp.dest('./dist/css'));
 
 }
 
 function watchFiles() {
-    gulp.watch('./src/styles/**/*.scss', styles);
+    gulp.watch('./src/styles/**/main.scss', styles);
   }
 
 exports.default = gulp.parallel(styles, watchFiles);
